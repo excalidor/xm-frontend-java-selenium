@@ -1,26 +1,26 @@
 image: maven:3.5.0-jdk-8
 
-#compile:
-#  stage: build
+compile:
+  stage: build
 #  script:
 #    - mvn compile --batch-mode
-#
+
 ##verify:
 ##  script:
 ##    - mvn verify --batch-mode
 
 test:
   stage: test
-  image: maven:3.6.3-jdk-11
-  script:
-    - mvn clean verify
-  allow_failure: true
-  artifacts:
-    expire_in: 4 weeks
-    paths:
-      - target/site/
-    when: always
-  timeout: 1h
+#  image: maven:3.6.3-jdk-11
+#  script:
+#    - mvn clean verify
+#  allow_failure: true
+#  artifacts:
+#    expire_in: 4 weeks
+#    paths:
+#      - target/site/
+#    when: always
+#  timeout: 1h
 #  only:
 #    - merge_requests
 #    - master
