@@ -16,7 +16,7 @@ test:
   script:
     - echo "disabled"
 #    - mvn clean verify
-#  allow_failure: true
+  allow_failure: true
 #  artifacts:
 #    expire_in: 4 weeks
 #    paths:
