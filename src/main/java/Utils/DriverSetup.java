@@ -101,7 +101,6 @@ public class DriverSetup {
     }
 
     /**
-     * Please no longer use this explicit wait (we look to deprecate it)
      *
      * @param millisecs the length of the pause, in milliseconds
      */

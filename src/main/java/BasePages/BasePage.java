@@ -1,19 +1,13 @@
 package BasePages;
 
 
-import Enums.TextComparison;
 import PageObjects.ResearchAndEducationPage;
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.*;
 import Utils.DriverSetup;
 import Enums.NavigationMenuItems;
 
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.Select;
-
-import static org.openqa.selenium.support.ui.ExpectedConditions.*;
-import static org.testng.AssertJUnit.*;
 
 
 @Slf4j
