@@ -17,6 +17,8 @@ public class ResearchAndEducationPage extends BasePage implements IPageIdentity<
     private static final String IDENTITY_ELM_1 = "//*[@id=\"main-nav\"]/li[4]/div/div/div[3]/div[1]/span";
     private static final String ECONOMIC_CALENDAR_LOW_RES = "//*[@id=\"researchMenu\"]/ul/li[.//text()='Economic Calendar']/a/span";
     private static final String ECONOMIC_CALENDAR = "//*[@id=\"main-nav\"]/li[4]/div/div/div[3]/div[1]/ul/li[6]";
+    private static final String EDUCATIONAL_VIDEO_LOW_RES = "//*[@id=\"researchMenu\"]/ul/li[14]/a";
+    private static final String EDUCATIONAL_VIDEO = "//*[@id=\"main-nav\"]/li[4]/div/div/div[3]/div[2]/ul/li[4]";
 
     public ResearchAndEducationPage() {
 
@@ -51,12 +53,12 @@ public class ResearchAndEducationPage extends BasePage implements IPageIdentity<
 
     public EducationalVideosPage clickOnEducationalVideos() {
         if (smallScreen) {
-            scrollIntoView(driver, driver.findElement(By.xpath("//*[@id=\"researchMenu\"]/ul/li[14]/a")));
-            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"researchMenu\"]/ul/li[14]/a")));
-            elementActions.clickOn("//*[@id=\"researchMenu\"]/ul/li[14]/a");
+            scrollIntoView(driver, driver.findElement(By.xpath(EDUCATIONAL_VIDEO_LOW_RES)));
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(EDUCATIONAL_VIDEO_LOW_RES)));
+            elementActions.clickOn(EDUCATIONAL_VIDEO_LOW_RES);
         } else {
-            scrollIntoView(driver, driver.findElement(By.xpath("//*[@id=\"main-nav\"]/li[4]/div/div/div[3]/div[2]/ul/li[4]")));
-            elementActions.clickOn(By.xpath("//*[@id=\"main-nav\"]/li[4]/div/div/div[3]/div[2]/ul/li[4]"));
+            scrollIntoView(driver, driver.findElement(By.xpath(EDUCATIONAL_VIDEO)));
+            elementActions.clickOn(By.xpath(EDUCATIONAL_VIDEO));
         }
         return new EducationalVideosPage();
     }
