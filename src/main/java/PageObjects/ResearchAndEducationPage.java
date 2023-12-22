@@ -13,6 +13,10 @@ public class ResearchAndEducationPage extends BasePage implements IPageIdentity<
 
     private static final String PAGE_ELEMENT = "//*[@id=\"main-nav\"]/li[4]/div/div/div[1]/span";
     private static final String PAGE_ELEMENT_SMALL = "//*[@id=\"researchMenu\"]/ul/li[1]";
+    private static final String IDENTITY_ELM_LOW_1 = "//*[@id=\"researchMenu\"]/ul/li[2]/a/span";
+    private static final String IDENTITY_ELM_1 = "//*[@id=\"main-nav\"]/li[4]/div/div/div[3]/div[1]/span";
+    private static final String ECONOMIC_CALENDAR_LOW_RES = "//*[@id=\"researchMenu\"]/ul/li[.//text()='Economic Calendar']/a/span";
+    private static final String ECONOMIC_CALENDAR = "//*[@id=\"main-nav\"]/li[4]/div/div/div[3]/div[1]/ul/li[6]";
 
     public ResearchAndEducationPage() {
 
@@ -23,8 +27,8 @@ public class ResearchAndEducationPage extends BasePage implements IPageIdentity<
     public boolean checkPageIdentity() {
 
         log.info("Checking Research and Education page identity...");
-        return (smallScreen && elementChecks.checkIfElementDisplayed(By.xpath("//*[@id=\"researchMenu\"]/ul/li[2]/a/span"))) ||
-                elementChecks.checkIfElementDisplayed(By.xpath("//*[@id=\"main-nav\"]/li[4]/div/div/div[3]/div[1]/span"));
+        return (smallScreen && elementChecks.checkIfElementDisplayed(By.xpath(IDENTITY_ELM_LOW_1))) ||
+                elementChecks.checkIfElementDisplayed(By.xpath(IDENTITY_ELM_1));
     }
 
     public boolean checkPageElements() {
@@ -36,11 +40,11 @@ public class ResearchAndEducationPage extends BasePage implements IPageIdentity<
 
     public EconomicCalendarPage clickOnEconomicCalendar() {
         if (smallScreen) {
-            scrollIntoView(driver, driver.findElement(By.xpath("//*[@id=\"researchMenu\"]/ul/li[.//text()='Economic Calendar']/a/span")));
-            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"researchMenu\"]/ul/li[.//text()='Economic Calendar']/a/span")));
-            elementActions.clickOn("//*[@id=\"researchMenu\"]/ul/li[.//text()='Economic Calendar']/a/span");
+            scrollIntoView(driver, driver.findElement(By.xpath(ECONOMIC_CALENDAR_LOW_RES)));
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(ECONOMIC_CALENDAR_LOW_RES)));
+            elementActions.clickOn(ECONOMIC_CALENDAR_LOW_RES);
         } else {
-            elementActions.clickOn("//*[@id=\"main-nav\"]/li[4]/div/div/div[3]/div[1]/ul/li[6]");
+            elementActions.clickOn(ECONOMIC_CALENDAR);
         }
         return new EconomicCalendarPage();
     }

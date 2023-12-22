@@ -14,7 +14,7 @@ public class TestExample extends BasePage {
             navigateToBasePage()
                     .navigateToResearchAndEducationPage()
                     .clickOnEconomicCalendar()
-                    .moveSlidenAndCheckDate()
+                    .moveSliderAndCheckDate()
                     .navigateToResearchAndEducationPage();
             navigateToBasePage()
                     .navigateToResearchAndEducationPage()
@@ -33,7 +33,7 @@ public class TestExample extends BasePage {
             navigateToBasePage()
                     .navigateToResearchAndEducationPage()
                     .clickOnEconomicCalendar()
-                    .moveSlidenAndCheckDate()
+                    .moveSliderAndCheckDate()
                     .navigateToResearchAndEducationPage();
             navigateToBasePage()
                     .navigateToResearchAndEducationPage()
@@ -51,7 +51,7 @@ public class TestExample extends BasePage {
         navigateToBasePage()
                 .navigateToResearchAndEducationPage()
                 .clickOnEconomicCalendar()
-                .moveSlidenAndCheckDate()
+                .moveSliderAndCheckDate()
                 .navigateToResearchAndEducationPage();
         navigateToBasePage()
                 .navigateToResearchAndEducationPage()
