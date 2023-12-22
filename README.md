@@ -53,7 +53,7 @@ Automate next use case to run in three different browser’s screen resolution:
   ______
  ## How the project may be improved:
  - Adding support for CI/CD (switching browser to headless mode)
- - Adding support for paralellization (WebDriver => ThreadLocal)
+ - Adding support for parallelization (WebDriver => ThreadLocal)
  - Externalize various parameters (time to wait, etc.)
  - Using Cucumber/Serenity for better scenarios visibility
   ______
