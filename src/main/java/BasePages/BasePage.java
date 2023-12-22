@@ -78,6 +78,11 @@ public class BasePage extends DriverSetup implements IPageIdentity<BasePage> {
         return menu.clickOn(pageObjectType);
     }
 
+    public void waitUntilPageIsLoaded() {
+        wait.until(
+                driver -> ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete"));
+    }
+
     public ResearchAndEducationPage navigateToResearchAndEducationPage() {
         if (smallScreen) {
             elementActions.clickOn(MENU_SMALL_XPATH);

@@ -15,6 +15,8 @@ public class EducationalVideosPage extends BasePage implements IPageIdentity<Bas
 
     public static final String FIRST_LESSON_HOLDER = "//*[@id=\"js-videoPlaylist\"]/li[2]/button";
     public static final String PLAY = "/html/body/div/div[2]";
+    private static final String EDUCATIONAL_VIDEOS = "https://www.xm.com/educational-videos";
+    private static final String IDENTITY_ELEMENT_1 = "//*[@id=\"top\"]/div[3]/div/div[3]/div/div/div[1]/h1";
 
     EducationalVideosPage() {
         assertOnPage();
@@ -22,12 +24,12 @@ public class EducationalVideosPage extends BasePage implements IPageIdentity<Bas
 
     @Override
     public boolean checkPageIdentity() {
-        return driver.getCurrentUrl().equals("https://www.xm.com/educational-videos");
+        return driver.getCurrentUrl().equals(EDUCATIONAL_VIDEOS);
     }
 
     @Override
     public boolean checkPageElements() {
-        return (smallScreen && elementChecks.checkIfElementDisplayed(By.xpath("//*[@id=\"top\"]/div[3]/div/div[3]/div/div/div[1]/h1"))) ||
+        return (smallScreen && elementChecks.checkIfElementDisplayed(By.xpath(IDENTITY_ELEMENT_1))) ||
                 elementChecks.checkIfElementsDisplayed(By.xpath("//*[@id=\"top\"]/div[3]/div/div[3]/div/div/div[1]/h1"));
     }
 
