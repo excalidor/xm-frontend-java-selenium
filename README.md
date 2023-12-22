@@ -8,6 +8,9 @@
   - TestNG
   - Maven
 
+Detailed documentation about classes and methods can be found in Javadoc folder. 
+Please feel free to access index.html file in Javadoc folder for more information. 
+
   ## Prerequisites:
 
   - Java > 1.8 or newer
@@ -46,7 +49,6 @@ Automate next use case to run in three different browser’s screen resolution:
 ![img.png](img.png)8. Click the Lesson 1.1 “Introduction to the Financial Markets.”
 
 ![img.png](img.png)9. Educational video should play for a minimum of 5 seconds
-
 
   ______
  ## How the project may be improved:
